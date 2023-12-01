@@ -20,8 +20,8 @@
         - Example: `ftp> get file.txt`
     - `put <filename>`: Uploads file `<filename>` to the server.
         - Example: `ftp> put file.txt`
-    - `ls <filename>`: Lists files on the server.
-        - Example: `ftp> ls file.txt`
+    - `ls`: Lists files on the server.
+        - Example: `ftp> ls`
     - `quit`: Disconnects from the server and exits the client.
         - Example: `ftp> quit`
 4) Once you're finished, use the `quit` command to exit the program.

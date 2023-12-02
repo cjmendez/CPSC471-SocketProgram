@@ -52,7 +52,6 @@ print(f"Client: {addr} is connected!\n")
 
 # accept connections forever
 while True:
-    print("Start of while True")
     # receive the data
     data = clientSock.recv(1024).decode()
 

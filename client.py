@@ -66,7 +66,7 @@ while True:
 
         # check if the server indicates an error (zero-size)
         if fileSizeBuff == "0000000000":
-            print("File not found on the server or other error occurred.")
+            print("File doesn't exist!\n")
         else:
             # get the file size as an integer
             fileSize = int(fileSizeBuff)
@@ -125,7 +125,7 @@ while True:
 
                 print(f"Sent {numSent} bytes.\n")
         except FileNotFoundError:
-            print("File doesn't exist!")
+            print("File doesn't exist!\n")
 
     # if the command is ls
     elif user_input.startswith("ls"):

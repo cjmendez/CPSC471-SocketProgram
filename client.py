@@ -55,9 +55,6 @@ while True:
         # the buffer to all data received from the the client
         fileData = ""
 
-        # the temporary buffer to store the received data
-        recvBuff = ""
-
         # the size of the incoming file
         fileSize = 0
 

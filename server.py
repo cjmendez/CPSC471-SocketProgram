@@ -52,6 +52,7 @@ print(f"Client: {addr} is connected!\n")
 
 # accept connections forever
 while True:
+    print("Start of while True")
     # receive the data
     data = clientSock.recv(1024).decode()
 
@@ -152,8 +153,8 @@ while True:
 
         print("LS COMMAND SUCCESSFUL\n")
 
-    # if the command is quit
-    elif data.startswith("quit"):
+    # all other commands close the server
+    else:
         print(f"Client: {addr} disconnected!")
         break
 

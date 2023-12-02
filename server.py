@@ -103,9 +103,8 @@ while True:
         except FileNotFoundError:
             print("FAILED")
             print("FILE DOESN'T EXIST!")
-            break
-
-        continue
+            # send zero-size to indicate an error
+            clientSock.send("0000000000".encode())
 
     # if the command is put
     elif data.startswith("put"):
@@ -153,8 +152,8 @@ while True:
 
         print("LS COMMAND SUCCESSFUL\n")
 
-    # all other commands close the server
-    else:
+    # if the command is quit
+    elif data.startswith("quit"):
         print(f"Client: {addr} disconnected!")
         break
 

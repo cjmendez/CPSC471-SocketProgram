@@ -52,7 +52,7 @@ while True:
         # send the entire input because we need to get data from the server
         connSock.send(user_input.encode())
 
-        # the buffer to all data received from the the client
+        # the buffer to all data received from the client
         fileData = ""
 
         # the size of the incoming file
@@ -64,7 +64,10 @@ while True:
         # get the size of the buffer indicated by the first 10 bytes
         fileSizeBuff = recvAll(connSock, 10)
 
-        try:
+        # check if the server indicates an error (zero-size)
+        if fileSizeBuff == "0000000000":
+            print("File not found on the server or other error occurred.")
+        else:
             # get the file size as an integer
             fileSize = int(fileSizeBuff)
 
@@ -75,10 +78,6 @@ while True:
 
             print("The file content is:")
             print(fileData, "\n")
-        except ValueError:
-            print("Invalid file size format received from the server.")
-        except FileNotFoundError:
-            print("File doesn't exist!")
 
     # if the command is put
     elif user_input.startswith("put"):
@@ -147,4 +146,5 @@ while True:
         print("Invalid command, try again!")
 
 # close the socket
+print("Closing socket")
 connSock.close()

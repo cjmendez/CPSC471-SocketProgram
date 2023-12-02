@@ -11,10 +11,10 @@
 * Python
 
 ## How to run:
-1) Execute `sendfileserv.py` in a Terminal window with the following command, replacing `<PORTNUMBER>` with your desired port number: `python sendfileserv.py <PORTNUMBER>`.
-    - Example: `python sendfileserv.py 1234`
-2) In a separate Terminal window, run `sendfilecli.py` using the following command, and again, replace `<PORTNUMBER>` with the same port number as before: `python sendfilecli.py localhost <PORTNUMBER>`.
-    - Example: `python sendfilecli.py localhost 1234`
+1) Execute `server.py` in a Terminal window with the following command, replacing `<PORTNUMBER>` with your desired port number: `python server.py <PORTNUMBER>`.
+    - Example: `python server.py 1234`
+2) In a separate Terminal window, run `client.py` using the following command, and again, replace `<PORTNUMBER>` with the same port number as before: `python client.py localhost <PORTNUMBER>`.
+    - Example: `python client.py localhost 1234`
 3) Upon connecting to the server, the client prints out `ftp>`, allowing you to execute the following commands:
     - `get <filename>`: Downloads file `<filename>` from the server.
         - Example: `ftp> get file.txt`

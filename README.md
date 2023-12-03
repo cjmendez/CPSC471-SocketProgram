@@ -25,3 +25,7 @@
     - `quit`: Disconnects from the server and exits the client.
         - Example: `ftp> quit`
 4) Once you're finished, use the `quit` command to exit the program.
+
+## Sample Output:
+<img width="1345" alt="Screenshot 2023-12-02 at 2 30 53 PM" src="https://github.com/cjmendez/CPSC471-SocketProgram/assets/70356772/8a160b14-efcb-45bf-bf4a-663dff185f76">
+
